@@ -12,6 +12,7 @@ class ListStory extends StatelessWidget {
     return Container(
       height: Responsive.heightPercentage(context, 0.13),
       width: double.infinity,
+      padding: const EdgeInsets.only(left: 10),
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: const [

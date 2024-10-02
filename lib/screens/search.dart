@@ -44,7 +44,6 @@ class _SearchState extends State<Search> {
             children: [
               const SizedBox(height: 30),
               SizedBox(
-                //height: 35,
                 height: Responsive.heightPercentage(context, 0.04), 
                 child: ListView(
                   scrollDirection: Axis.horizontal,

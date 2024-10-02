@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Instagram',
       home: Scaffold(
       body: 
-        // const Profile(),
-        const Search(),
+        const Profile(),
+        // const Search(),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
