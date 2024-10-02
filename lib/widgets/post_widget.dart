@@ -14,7 +14,7 @@ class PostWidget extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 20,
-                backgroundImage: AssetImage('assets/avatar.jpg'),
+                backgroundColor: Colors.grey,
               ),
               SizedBox(width: 10),
               Column(

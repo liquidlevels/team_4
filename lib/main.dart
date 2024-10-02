@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:view_team_4/screens/home.dart';
 import 'package:view_team_4/screens/profile.dart';
 import 'package:view_team_4/screens/search.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       title: 'Instagram',
       home: Scaffold(
       body: 
-        const Profile(),
+        const Home(),
+        // const Profile(),
         // const Search(),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,

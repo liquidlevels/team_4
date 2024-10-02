@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:page_instragram/widgets/avatar_story.dart';
-import 'package:page_instragram/widgets/list_story.dart';
-import 'package:page_instragram/widgets/post_widget.dart';
+import 'package:view_team_4/widgets/list_story.dart';
+import 'package:view_team_4/widgets/post_widget.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
