@@ -1,26 +1,57 @@
-// Widget de la lista de historias
 import 'package:flutter/material.dart';
-import 'package:page_instragram/widgets/avatar_story.dart';
 
-class ListStory extends StatelessWidget {
-  const ListStory({super.key});
+class PostWidget extends StatelessWidget {
+  const PostWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height *
-          0.13, // 13% de la altura de la pantalla
-      width: double.infinity, // Ancho completo
-      padding: const EdgeInsets.only(left: 10),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      child: Column(
+        children: [
+          // Row con avatar y nombre de usuario
+          const Row(
+            children: [
+              CircleAvatar(
+                radius: 20,
+                backgroundImage: AssetImage('assets/avatar.jpg'),
+              ),
+              SizedBox(width: 10),
+              Column(
+                children: [
+                  Text(
+                    'Username',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          // Contenedor para la publicación
+          Container(
+            height: MediaQuery.of(context).size.height * 0.50,
+            width: double.infinity,
+            color: Colors.grey,
+          ),
 
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 5,
-        itemBuilder: (context, index) {
-          return AvatarStory(
-            text: '$index Your Story ',
-          );
-        },
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  IconButton(
+                      icon: const Icon(Icons.favorite_border),
+                      onPressed: () {}),
+                  IconButton(icon: const Icon(Icons.comment), onPressed: () {}),
+                  IconButton(icon: const Icon(Icons.send), onPressed: () {}),
+                ],
+              ),
+              IconButton(
+                  icon: const Icon(Icons.bookmark_border), onPressed: () {}),
+            ],
+          ),
+        ],
       ),
     );
   }
